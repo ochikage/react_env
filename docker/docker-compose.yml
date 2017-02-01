@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  webpack:
+    build: ./webpack
+    image: webpack:0.1
+    container_name: webpack
+    working_dir: /src
+    ports:
+      - "8080:8080"
+    volumes:
+      - ..:/src
+    command: >
+      /bin/sh -c "npm install
+      && webpack-dev-server --host=0.0.0.0 --config /src/webpack.config.js --content-base /src/assets/bundles/"
+    environment:
+      - NODE_PATH=/src/node_modules
+      - PATH=/src/node_modules/.bin:$PATH
