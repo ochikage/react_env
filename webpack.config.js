@@ -5,6 +5,7 @@ module.exports = {
     context: '/src',
     entry: {
         sample: '/src/assets/js/sample',
+        intl: '/src/assets/js/intl',
     },
     output: {
         path: path.resolve('/src/assets/bundles'),
