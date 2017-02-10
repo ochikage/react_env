@@ -4,7 +4,7 @@ var webpack = require('webpack')
 module.exports = {
     context: '/src',
     entry: {
-        sample: '/src/assets/js/sample',
+        root: '/src/assets/js/root',
     },
     output: {
         path: path.resolve('/src/assets/bundles'),
