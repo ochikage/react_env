@@ -4,7 +4,7 @@ var webpack = require('webpack')
 module.exports = {
     context: '/src',
     entry: {
-        sample: '/src/assets/js/sample',
+        BigCalendarSample: '/src/assets/js/BigCalendarSample',
     },
     output: {
         path: path.resolve('/src/assets/bundles'),
@@ -36,7 +36,11 @@ module.exports = {
                     presets: ['es2015', 'react'],
                     plugins: ['transform-class-properties'],
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
         ]
     },
     resolve: {
