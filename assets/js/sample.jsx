@@ -2,11 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import {BrowserRouter, Match, Miss, Link} from 'react-router'
+import {TwitterPicker, Twitter} from 'react-color';
 
-var Hello = React.createClass({
-    render: function() {
-        return(<h1>Hello, React!</h1>);
+console.log(Twitter);
+
+class ColorSample extends React.Component {
+    render() {
+        return(
+            <TwitterPicker 
+            />
+        );
     }
-});
+}
 
-ReactDOM.render(<Hello />, document.getElementById('hello'));
+ReactDOM.render(<ColorSample />, document.getElementById('color'));
