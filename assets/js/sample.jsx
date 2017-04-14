@@ -1,12 +1,27 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import {BrowserRouter, Match, Miss, Link} from 'react-router'
+import Menu, {SubMenu, MenuItem} from 'rc-menu';
+import 'rc-menu/assets/index.css';
 
-var Hello = React.createClass({
-    render: function() {
-        return(<h1>Hello, React!</h1>);
+class ReactMenuSample extends React.Component {
+    render() {
+        return(
+            <div style={{width: '50%'}}>
+            <Menu mode="horizontal"
+                onSelect={(info) => {
+                    console.log(info);
+                }}
+            >
+                <SubMenu key="foo" title="foo">
+                <MenuItem key="foo1">foo1</MenuItem>
+                <MenuItem disabled={true}>foo2</MenuItem>
+                </SubMenu>
+                <MenuItem>menu2</MenuItem>
+            </Menu>
+            </div>
+        );
     }
-});
+}
 
-ReactDOM.render(<Hello />, document.getElementById('hello'));
+ReactDOM.render(<ReactMenuSample />, document.getElementById('hello'));
