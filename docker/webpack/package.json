@@ -38,6 +38,7 @@
     "react-google-charts": "^1.4.2",
     "react-router": "^4.0.0-alpha.6",
     "react-tap-event-plugin": "^2.0.1",
+    "react-virtualized": "^9.7.4",
     "recompose": "^0.21.2",
     "resolve-pathname": "^2.0.2",
     "scriptjs": "^2.5.8",
